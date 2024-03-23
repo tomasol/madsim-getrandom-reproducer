@@ -1,0 +1,15 @@
+[package]
+name = "madsim-getrandom-reproducer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[dev-dependencies]
+madsim = "0.2.25"
+getrandom = "=0.2.11" # For madsim patch
+
+[patch.crates-io]
+getrandom = { git = "https://github.com/madsim-rs/getrandom.git", rev = "e79a7aecbcf8a43a802d30742667b77d75c613bd" } # madsim
